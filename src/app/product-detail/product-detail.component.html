@@ -1,0 +1,53 @@
+<div class="container">
+
+
+  <div *ngIf = "displayedImage" class="row justify-content-center">
+    <div class="col-sm-6 py-3">
+      <img [src]="displayedImage" style ="height: 60vh" class="img-fluid" (click)="imgClick($event)">
+    </div>
+  </div>
+  <div class="row">
+
+    <div *ngFor="let item of product.image_set; index as i" class="col-sm-3">
+      <img [src]="product.image_set[i].url" style="height: 12em" [attr.data-index]="i" (click)="imgClick($event)">
+    </div>
+
+
+  </div>
+  <div class="row">
+    <p>
+      {{product.productName}}<br>{{product.description}}
+    </p>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Option</th>
+          <th scope="col">Price</th>
+          <th scope="col">Availability</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>9.99$</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>9.99$</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>9.99$</td>
+          <td>12</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

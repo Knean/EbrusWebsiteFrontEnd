@@ -1,21 +1,11 @@
 <div class="container-fluid">
-  <div class="row" *ngFor="let value of images">
+  <div class="row" *ngFor="let value of images; index as i" >
     <div class="col-sm-4">
-      <img [src]="value.url" style="width:100%;margin-bottom:1em;">
+      <img [src]="value.image_set[0]? value.image_set[0]['url']: ''" style="width:100%;margin-bottom:1em;" [attr.data-index]="value.id" (click)="navigate($event)">
       <div style="height: 100%"></div>
     </div>
     <div class="col-sm-8">
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius laoreet massa,
-        in semper erat suscipit ac. Fusce pharetra, diam et egestas facilisis,
-        ex tortor ornare justo, consectetur blandit enim mauris et mauris. Ut ipsum velit,
-        rhoncus nec cursus vel, accumsan at sapien. Donec porta eros et libero posuere,
-        id tristique nunc vehicula. Nam et ligula in purus consequat consectetur sit amet nec sem.
-        Nunc sed molestie turpis. Sed et scelerisque tortor, ultrices consequat metus.
-        Morbi vestibulum lobortis lectus at imperdiet.
-        Etiam et justo arcu. Pellentesque luctus ante eu auctor hendrerit.
-        Cras et lacus tempus, semper enim in, gravida purus. Nunc sed porta quam.
-        Vivamus cursus diam id aliquet aliquam. Cras vestibulum, nulla nec fringilla ornare,
-        ante mi dictum ex, sollicitudin placerat libero quam vitae lectus.</p>
+      <p> {{value.productName}}</p>
     </div>
   </div>
 </div>

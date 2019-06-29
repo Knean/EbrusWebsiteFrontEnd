@@ -14,7 +14,8 @@ import { DropdownDirective } from './dropdown.directive';
 import { ClothinglistComponent } from './clothinglist/clothinglist.component';
 import { FoodlistComponent } from './foodlist/foodlist.component';
 import { SpecialorderComponent } from './specialorder/specialorder.component';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,12 +28,15 @@ import { SpecialorderComponent } from './specialorder/specialorder.component';
     DropdownDirective,
     ClothinglistComponent,
     FoodlistComponent,
-    SpecialorderComponent
+    SpecialorderComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

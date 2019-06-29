@@ -12,7 +12,7 @@ export class GetImagesService {
       (
         "https://firestore.googleapis.com/v1/projects/ebrusproducts/databases/(default)/documents/images"
       ).pipe(
-        map((value:any) => {
+        map((value: any) => {
           var fixedobject = []
           for (var i = 0; i < value.documents.length; ++i) {
             fixedobject.push({
@@ -23,5 +23,24 @@ export class GetImagesService {
           return fixedobject
         }))
 
+  }
+  public searchProducts(query){
+    return this.http.get(
+      `https://evening-taiga-61292.herokuapp.com/api/search/${query}`
+    )
+  }
+
+  public getProducts() {
+    return this.http.get
+      (
+        "https://evening-taiga-61292.herokuapp.com/api/products"
+      )
+  }
+
+  public getProductDetail(pk){
+    return this.http.get
+    (
+      `https://evening-taiga-61292.herokuapp.com/api/products/${pk}`
+    )
   }
 }

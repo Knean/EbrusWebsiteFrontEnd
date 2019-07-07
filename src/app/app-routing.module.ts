@@ -6,6 +6,7 @@ import { FoodlistComponent } from './foodlist/foodlist.component';
 import { ClothinglistComponent } from './clothinglist/clothinglist.component';
 import { SpecialorderComponent } from './specialorder/specialorder.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { BillingComponent } from './billing/billing.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/home',pathMatch:'full'},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'clothinglist',component: ClothinglistComponent},
   {path:'specialorders',component:SpecialorderComponent},
   {path:'detail/:pk',component:ProductDetailComponent},
-  { path: "**",redirectTo:"home"}
+  {path:'donate',component:BillingComponent},
+  {path: "**",redirectTo:"home"}
 ];
 
 @NgModule({

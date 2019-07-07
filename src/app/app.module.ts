@@ -16,6 +16,7 @@ import { FoodlistComponent } from './foodlist/foodlist.component';
 import { SpecialorderComponent } from './specialorder/specialorder.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { BillingComponent } from './billing/billing.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ClothinglistComponent,
     FoodlistComponent,
     SpecialorderComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    BillingComponent
   ],
   imports: [
     BrowserModule,

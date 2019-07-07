@@ -1,15 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="">Navbar</a>
+  <a class="navbar-brand" routerLink="/home" routerLinkActive="active">home</a>
   <button class="navbar-toggler " (click)=displayNav() type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse "[class.show]= "navShow" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/home" routerLinkActive="active">home</a>
-      </li>
-      <li class="nav-item">
+       <li class="nav-item">
         
         <a class="nav-link" routerLink="/products" routerLinkActive="active">products</a>
       </li>
@@ -27,6 +24,10 @@
       <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Register</a>
       </li>
+      <li class="nav-item">
+        
+          <a style = "color: green" class="nav-link" routerLink="/donate" routerLinkActive="active">Donate</a>
+        </li>
     </ul>
     <form [formGroup] = "searchForm" (ngSubmit)="onSubmit()" class="form-inline my-2 my-lg-0">
       <input formControlName = "query" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

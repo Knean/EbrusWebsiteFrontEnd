@@ -43,4 +43,7 @@ export class GetImagesService {
       `https://evening-taiga-61292.herokuapp.com/api/products/${pk}`
     )
   }
+  public sendToken(token){
+    return this.http.post("https://evening-taiga-61292.herokuapp.com/api/charge",{"token":token.id})
+  }
 }

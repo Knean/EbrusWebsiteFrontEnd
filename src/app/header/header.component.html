@@ -21,13 +21,31 @@
           <a (click)="dropdown()" class="dropdown-item" routerLink="/specialorders">Special orders</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Register</a>
+      <li  class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
       </li>
       <li class="nav-item">
         
           <a style = "color: green" class="nav-link" routerLink="/donate" routerLinkActive="active">Donate</a>
         </li>
+        
+        <li class="nav-item" *ngIf = "!user; else elseBlock">
+        
+            <a  class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+        </li>
+        <ng-template #elseBlock>
+            <li class="nav-item dropdown ">
+                <a (click)="profileClick()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                  {{user.name}}
+                </a>
+                <div  [class.show]="profileShow" class="dropdown-menu"  aria-labelledby="navbarDropdown" >
+                  <a  class="dropdown-item" routerLink="/profile">Profile</a>                  
+                  <div class="dropdown-divider"></div>
+                  <a  class="dropdown-item" (click)="logout()">Logout</a>
+                </div>
+              </li>
+        </ng-template>
+
     </ul>
     <form [formGroup] = "searchForm" (ngSubmit)="onSubmit()" class="form-inline my-2 my-lg-0">
       <input formControlName = "query" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

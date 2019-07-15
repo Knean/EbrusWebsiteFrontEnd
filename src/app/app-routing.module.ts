@@ -7,6 +7,8 @@ import { ClothinglistComponent } from './clothinglist/clothinglist.component';
 import { SpecialorderComponent } from './specialorder/specialorder.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { BillingComponent } from './billing/billing.component';
+import { RegisterComponent } from './register/register.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/home',pathMatch:'full'},
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path:'specialorders',component:SpecialorderComponent},
   {path:'detail/:pk',component:ProductDetailComponent},
   {path:'donate',component:BillingComponent},
+  {path:'register',component: RegisterComponent},
+  {path:'profile',component: ProfileComponent},
   {path: "**",redirectTo:"home"}
 ];
 

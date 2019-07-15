@@ -17,6 +17,9 @@ import { SpecialorderComponent } from './specialorder/specialorder.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { BillingComponent } from './billing/billing.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +34,10 @@ import { BillingComponent } from './billing/billing.component';
     FoodlistComponent,
     SpecialorderComponent,
     ProductDetailComponent,
-    BillingComponent
+    BillingComponent,
+    RegisterComponent,
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

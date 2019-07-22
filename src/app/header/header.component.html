@@ -33,6 +33,10 @@
         
             <a  class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
         </li>
+        <li class="nav-item">
+        
+          <a style = "color: green" class="nav-link" routerLink="/checkout" routerLinkActive="active"><i class="fas fa-shopping-cart"></i>{{cart.products.length}}</a>
+        </li>
         <ng-template #elseBlock>
             <li class="nav-item dropdown ">
                 <a (click)="profileClick()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >

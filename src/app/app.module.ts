@@ -20,6 +20,7 @@ import { BillingComponent } from './billing/billing.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { ProfileComponent } from './profile/profile.component';
     BillingComponent,
     RegisterComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

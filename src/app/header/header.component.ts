@@ -12,6 +12,7 @@ import { AuthenticationService } from '../authentication.service';
 })
 export class HeaderComponent implements OnInit {
   constructor(
+    private activatedroute: ActivatedRoute,
     private router: Router, 
     private auth: AuthenticationService){}
 
@@ -19,6 +20,7 @@ export class HeaderComponent implements OnInit {
   public navShow = false
   public profileShow = false
   public user
+  public cart
   dropdown() {
     this.show = !this.show
   }
@@ -41,6 +43,8 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['products'], { queryParams: { 'search': this.searchForm.get('query').value } })
   }
   ngOnInit() {    
+    this.auth.cart.subscribe(data=> this.cart = data)
+    this.activatedroute.url.subscribe(data=>console.log(data, 'subscribed to route'))
     this.auth.get_user()
     this.auth.user.subscribe(data=>this.user = data)
     this.searchForm = new FormGroup(

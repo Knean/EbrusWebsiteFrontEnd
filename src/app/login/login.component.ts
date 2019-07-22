@@ -23,7 +23,16 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['home'])
   
   }
+  cartForm = new FormGroup({
+    product_id: new FormControl('',Validators.required)
+  })
   
+  submitCart(){
+    let product_id = this.cartForm.controls.product_id.value
+    console.log(product_id, ' this is id from the form')
+    console.log(this.cartForm.value,'whole form')
+    this.auth.updateCart(product_id)
+  }
 
   ngOnInit() {
   }

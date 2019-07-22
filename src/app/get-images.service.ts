@@ -7,6 +7,7 @@ import { map } from 'rxjs/operators';
 export class GetImagesService {
 
   constructor(private http: HttpClient) { }
+  //public baseURL = document.URL.split('/').splice(0,3).join('/') + '/' 
   public getImages() {
     return this.http.get
       (

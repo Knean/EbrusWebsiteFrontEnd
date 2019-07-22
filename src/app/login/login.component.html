@@ -9,3 +9,11 @@
       </label>    
     <button type="submit"> Login </button>
   </form>
+
+  <form (ngSubmit)="submitCart()" [formGroup]="cartForm">
+    <label>
+      product id:
+      <input type="text" formControlName="product_id">
+    </label>    
+    <button type="submit"> Login </button>
+  </form>

@@ -1,11 +1,31 @@
 <div class="container-fluid">
-  <div class="row" *ngFor="let value of images; index as i" >
+  <div class="row" *ngFor="let value of products; index as i">
+
     <div class="col-sm-4">
-      <img [src]="value.image_set[0]? value.image_set[0]['url']: ''" style="width:100%;margin-bottom:1em;" [attr.data-index]="value.id" (click)="navigate($event)">
+      <img [src]="value.image_set[0]? value.image_set[0]['url']: ''" style="width:100%;margin-bottom:1em;"
+        [attr.data-index]="value.id" (click)="navigate($event)">
       <div style="height: 100%"></div>
     </div>
     <div class="col-sm-8">
-      <p> {{value.productName}}</p>
+      <div class="row-items-start ">
+        <p> {{value.productName}}</p>
+      </div>
+      <div style="height: 60%"></div>
+      <div class="row align-items-end">
+        <div *ngIf="productInCart(value.id); else elseBlock">
+
+          <p>in cart 
+            <button (click)="updateCart(value.id)" class="btn btn-danger">
+              remove from Cart
+            </button>
+          </p>          
+        </div>
+
+        <ng-template #elseBlock>
+          <button (click)="updateCart(value.id)" class="btn btn-primary">Add to Cart</button>
+        </ng-template>
+      </div>
+
+
     </div>
   </div>
-</div>

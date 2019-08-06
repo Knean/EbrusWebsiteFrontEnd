@@ -21,6 +21,10 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { BillingFormComponent } from './billing-form/billing-form.component';
+import { PaymentParentComponent } from './payment-parent/payment-parent.component';
+import { ThankyoupageComponent } from './thankyoupage/thankyoupage.component';
+import { OrderDetailComponent } from './order-detail/order-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +43,11 @@ import { CheckoutComponent } from './checkout/checkout.component';
     RegisterComponent,
     LoginComponent,
     ProfileComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    BillingFormComponent,
+    PaymentParentComponent,
+    ThankyoupageComponent,
+    OrderDetailComponent
   ],
   imports: [
     BrowserModule,

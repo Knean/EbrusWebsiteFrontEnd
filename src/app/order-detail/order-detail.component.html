@@ -1,0 +1,6 @@
+<div>
+  your order id: some number <br>
+  <p>you ordered these products:</p> <p *ngFor = "let product of orderObject.products">{{product.name}}</p><br>
+  price paid: {{orderObject.total}}<br>
+  address: {{orderObject.address[0].address_line_1}}
+</div>

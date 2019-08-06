@@ -1,0 +1,16 @@
+<ng-container  *ngIf = "!this.address">
+<app-billing-form #addressForm (addressEmitter)= "getAddress($event)"></app-billing-form>
+<button class = "btn btn-primary"(click)="addressForm.onSubmit()"> Send address</button>
+ </ng-container>
+
+ <ng-container  *ngIf = "this.address && !this.order">
+    <app-billing [amount]='400' #stripe (stripeToken)="postToken($event)">
+    </app-billing>
+    <button class="btn btn-primary" (click)="stripe.submitWithoutClicking()">
+        outside button
+    </button>
+ </ng-container>
+ <ng-container *ngIf = "this.order">
+     <app-order-detail [orderObject]="order"></app-order-detail>
+ </ng-container>
+

@@ -40,7 +40,7 @@
         <ng-template #elseBlock>
             <li class="nav-item dropdown ">
                 <a (click)="profileClick()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                  {{user.name}}
+                  {{user.username}}
                 </a>
                 <div  [class.show]="profileShow" class="dropdown-menu"  aria-labelledby="navbarDropdown" >
                   <a  class="dropdown-item" routerLink="/profile">Profile</a>                  

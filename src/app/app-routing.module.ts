@@ -10,6 +10,9 @@ import { BillingComponent } from './billing/billing.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { BillingFormComponent } from './billing-form/billing-form.component';
+import { PaymentParentComponent } from './payment-parent/payment-parent.component';
+import { OrderDetailComponent } from './order-detail/order-detail.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/home',pathMatch:'full'},
@@ -23,6 +26,9 @@ const routes: Routes = [
   {path:'register',component: RegisterComponent},
   {path:'profile',component: ProfileComponent},
   {path:'checkout',component:CheckoutComponent},
+  {path:'address',component:BillingFormComponent},
+  {path:'billing',component: PaymentParentComponent},
+  {path:'order',component:OrderDetailComponent},
   {path: "**",redirectTo:"home"}
   
 ];
